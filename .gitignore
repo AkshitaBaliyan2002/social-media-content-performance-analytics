@@ -1,0 +1,17 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Local Power BI files and autosaves
+*.pbix.tmp
+*.pbit.tmp
+~$*.pbix
+~$*.xlsx
+
+# Local exports that can be regenerated
+exports/
+screenshots/
+

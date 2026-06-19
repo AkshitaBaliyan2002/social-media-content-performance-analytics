@@ -1,0 +1,56 @@
+campaign_id,campaign_name,campaign_type,platform,objective,content_category_focus,start_date,end_date,spend,impressions,clicks,conversions,revenue,roi,roas,source_type
+ORG-INSTAGRAM,Organic / Always On,Organic,Instagram,Organic Content,Mixed,2024-01-01,2025-12-31,0.00,22583318,308137,9106,0.00,0.000000,0.000000,Kaggle posts + modeled campaign economics
+CMP-2024-INSTAGRAM-01,2024 Q1 Awareness Sprint,Paid,Instagram,Awareness,Education,2024-01-10,2024-02-28,8892.23,874224,11127,334,13712.69,0.542098,1.542098,Kaggle posts + modeled campaign economics
+CMP-2024-INSTAGRAM-02,2024 Spring Product Launch,Paid,Instagram,Product Launch,Technology,2024-03-05,2024-04-30,9378.42,904948,12468,383,21504.78,1.293007,2.293007,Kaggle posts + modeled campaign economics
+CMP-2024-INSTAGRAM-03,2024 Summer Creator Push,Paid,Instagram,Engagement,Entertainment,2024-06-01,2024-07-31,7769.02,1052570,13971,421,11029.31,0.419653,1.419653,Kaggle posts + modeled campaign economics
+CMP-2024-INSTAGRAM-04,2024 Back to School Offer,Paid,Instagram,Conversion,Business,2024-08-10,2024-09-25,4538.16,556761,8078,226,12016.12,1.647796,2.647796,Kaggle posts + modeled campaign economics
+CMP-2024-INSTAGRAM-05,2024 Holiday Revenue Campaign,Paid,Instagram,Revenue,Fashion,2024-11-01,2024-12-20,13546.07,1414201,19205,605,41788.09,2.084887,3.084887,Kaggle posts + modeled campaign economics
+CMP-2025-INSTAGRAM-06,2025 Q1 Awareness Sprint,Paid,Instagram,Awareness,Education,2025-01-10,2025-02-28,5885.83,798063,10928,328,10493.22,0.782794,1.782794,Kaggle posts + modeled campaign economics
+CMP-2025-INSTAGRAM-07,2025 Spring Product Launch,Paid,Instagram,Product Launch,Technology,2025-03-05,2025-04-30,11266.68,1106164,15466,484,29618.14,1.628826,2.628826,Kaggle posts + modeled campaign economics
+CMP-2025-INSTAGRAM-08,2025 Summer Creator Push,Paid,Instagram,Engagement,Entertainment,2025-06-01,2025-07-31,7477.11,964196,12821,378,17562.81,1.348877,2.348877,Kaggle posts + modeled campaign economics
+CMP-2025-INSTAGRAM-09,2025 Back to School Offer,Paid,Instagram,Conversion,Business,2025-08-10,2025-09-25,5326.88,668086,8892,259,17439.83,2.273930,3.273930,Kaggle posts + modeled campaign economics
+CMP-2025-INSTAGRAM-10,2025 Holiday Revenue Campaign,Paid,Instagram,Revenue,Fashion,2025-11-01,2025-12-20,8401.97,1022298,13820,431,28723.63,2.418678,3.418678,Kaggle posts + modeled campaign economics
+ORG-YOUTUBE,Organic / Always On,Organic,YouTube,Organic Content,Mixed,2024-01-01,2025-12-31,0.00,165529676,3147728,80838,0.00,0.000000,0.000000,Kaggle posts + modeled campaign economics
+CMP-2024-YOUTUBE-01,2024 Q1 Awareness Sprint,Paid,YouTube,Awareness,Education,2024-01-10,2024-02-28,53794.44,6296469,125633,3392,80160.95,0.490134,1.490134,Kaggle posts + modeled campaign economics
+CMP-2024-YOUTUBE-02,2024 Spring Product Launch,Paid,YouTube,Product Launch,Technology,2024-03-05,2024-04-30,86059.16,7547235,151110,3965,232506.64,1.701707,2.701707,Kaggle posts + modeled campaign economics
+CMP-2024-YOUTUBE-03,2024 Summer Creator Push,Paid,YouTube,Engagement,Entertainment,2024-06-01,2024-07-31,72889.40,7322026,150209,3946,89848.27,0.232666,1.232666,Kaggle posts + modeled campaign economics
+CMP-2024-YOUTUBE-04,2024 Back to School Offer,Paid,YouTube,Conversion,Business,2024-08-10,2024-09-25,89817.29,7872972,153505,4131,274625.15,2.057598,3.057598,Kaggle posts + modeled campaign economics
+CMP-2024-YOUTUBE-05,2024 Holiday Revenue Campaign,Paid,YouTube,Revenue,Fashion,2024-11-01,2024-12-20,30908.96,3755119,68383,1819,78260.50,1.531968,2.531968,Kaggle posts + modeled campaign economics
+CMP-2025-YOUTUBE-06,2025 Q1 Awareness Sprint,Paid,YouTube,Awareness,Education,2025-01-10,2025-02-28,84182.11,7595257,138634,3724,90133.52,0.070697,1.070697,Kaggle posts + modeled campaign economics
+CMP-2025-YOUTUBE-07,2025 Spring Product Launch,Paid,YouTube,Product Launch,Technology,2025-03-05,2025-04-30,82000.64,7493712,139551,3578,189914.12,1.316008,2.316008,Kaggle posts + modeled campaign economics
+CMP-2025-YOUTUBE-08,2025 Summer Creator Push,Paid,YouTube,Engagement,Entertainment,2025-06-01,2025-07-31,90511.67,8291009,163240,4375,111109.20,0.227568,1.227568,Kaggle posts + modeled campaign economics
+CMP-2025-YOUTUBE-09,2025 Back to School Offer,Paid,YouTube,Conversion,Business,2025-08-10,2025-09-25,56618.30,6367437,124185,3216,199073.87,2.516069,3.516069,Kaggle posts + modeled campaign economics
+CMP-2025-YOUTUBE-10,2025 Holiday Revenue Campaign,Paid,YouTube,Revenue,Fashion,2025-11-01,2025-12-20,82847.43,7110761,133756,3357,241093.32,1.910088,2.910088,Kaggle posts + modeled campaign economics
+ORG-TIKTOK,Organic / Always On,Organic,TikTok,Organic Content,Mixed,2024-01-01,2025-12-31,0.00,129584548,1502946,33578,0.00,0.000000,0.000000,Kaggle posts + modeled campaign economics
+CMP-2024-TIKTOK-01,2024 Q1 Awareness Sprint,Paid,TikTok,Awareness,Education,2024-01-10,2024-02-28,22869.45,3618970,44210,1073,21175.88,-0.074054,0.925946,Kaggle posts + modeled campaign economics
+CMP-2024-TIKTOK-02,2024 Spring Product Launch,Paid,TikTok,Product Launch,Technology,2024-03-05,2024-04-30,76224.10,10649692,124504,2907,215514.67,1.827382,2.827382,Kaggle posts + modeled campaign economics
+CMP-2024-TIKTOK-03,2024 Summer Creator Push,Paid,TikTok,Engagement,Entertainment,2024-06-01,2024-07-31,42864.22,5147735,62027,1437,97176.73,1.267083,2.267083,Kaggle posts + modeled campaign economics
+CMP-2024-TIKTOK-04,2024 Back to School Offer,Paid,TikTok,Conversion,Business,2024-08-10,2024-09-25,30551.66,4019073,45175,959,85857.80,1.810250,2.810250,Kaggle posts + modeled campaign economics
+CMP-2024-TIKTOK-05,2024 Holiday Revenue Campaign,Paid,TikTok,Revenue,Fashion,2024-11-01,2024-12-20,58768.17,7567176,84557,1899,141152.98,1.401861,2.401861,Kaggle posts + modeled campaign economics
+CMP-2025-TIKTOK-06,2025 Q1 Awareness Sprint,Paid,TikTok,Awareness,Education,2025-01-10,2025-02-28,35939.42,5198426,59255,1338,49312.97,0.372114,1.372114,Kaggle posts + modeled campaign economics
+CMP-2025-TIKTOK-07,2025 Spring Product Launch,Paid,TikTok,Product Launch,Technology,2025-03-05,2025-04-30,42971.77,6807846,75831,1752,100529.10,1.339422,2.339422,Kaggle posts + modeled campaign economics
+CMP-2025-TIKTOK-08,2025 Summer Creator Push,Paid,TikTok,Engagement,Entertainment,2025-06-01,2025-07-31,77079.47,8467867,96263,2142,131678.81,0.708351,1.708351,Kaggle posts + modeled campaign economics
+CMP-2025-TIKTOK-09,2025 Back to School Offer,Paid,TikTok,Conversion,Business,2025-08-10,2025-09-25,35558.12,5218239,63996,1449,133085.94,2.742772,3.742772,Kaggle posts + modeled campaign economics
+CMP-2025-TIKTOK-10,2025 Holiday Revenue Campaign,Paid,TikTok,Revenue,Fashion,2025-11-01,2025-12-20,40679.55,4735586,55585,1301,195543.15,3.806915,4.806915,Kaggle posts + modeled campaign economics
+ORG-LINKEDIN,Organic / Always On,Organic,LinkedIn,Organic Content,Mixed,2024-01-01,2025-12-31,0.00,5145188,117885,5345,0.00,0.000000,0.000000,Kaggle posts + modeled campaign economics
+CMP-2024-LINKEDIN-01,2024 Q1 Awareness Sprint,Paid,LinkedIn,Awareness,Education,2024-01-10,2024-02-28,4666.88,241916,5588,238,7832.33,0.678280,1.678280,Kaggle posts + modeled campaign economics
+CMP-2024-LINKEDIN-02,2024 Spring Product Launch,Paid,LinkedIn,Product Launch,Technology,2024-03-05,2024-04-30,5313.33,253630,6238,294,7986.67,0.503138,1.503138,Kaggle posts + modeled campaign economics
+CMP-2024-LINKEDIN-03,2024 Summer Creator Push,Paid,LinkedIn,Engagement,Entertainment,2024-06-01,2024-07-31,6437.76,301101,7194,307,7091.03,0.101475,1.101475,Kaggle posts + modeled campaign economics
+CMP-2024-LINKEDIN-04,2024 Back to School Offer,Paid,LinkedIn,Conversion,Business,2024-08-10,2024-09-25,1523.80,81821,1771,85,4156.56,1.727760,2.727760,Kaggle posts + modeled campaign economics
+CMP-2024-LINKEDIN-05,2024 Holiday Revenue Campaign,Paid,LinkedIn,Revenue,Fashion,2024-11-01,2024-12-20,4051.05,226062,5374,260,9357.42,1.309875,2.309875,Kaggle posts + modeled campaign economics
+CMP-2025-LINKEDIN-06,2025 Q1 Awareness Sprint,Paid,LinkedIn,Awareness,Education,2025-01-10,2025-02-28,5454.87,306114,7144,314,5840.46,0.070687,1.070687,Kaggle posts + modeled campaign economics
+CMP-2025-LINKEDIN-07,2025 Spring Product Launch,Paid,LinkedIn,Product Launch,Technology,2025-03-05,2025-04-30,3860.82,235818,5896,275,12179.23,2.154571,3.154571,Kaggle posts + modeled campaign economics
+CMP-2025-LINKEDIN-08,2025 Summer Creator Push,Paid,LinkedIn,Engagement,Entertainment,2025-06-01,2025-07-31,5410.70,300623,7074,297,8846.86,0.635068,1.635068,Kaggle posts + modeled campaign economics
+CMP-2025-LINKEDIN-09,2025 Back to School Offer,Paid,LinkedIn,Conversion,Business,2025-08-10,2025-09-25,3056.89,143480,3992,177,7330.93,1.398166,2.398166,Kaggle posts + modeled campaign economics
+CMP-2025-LINKEDIN-10,2025 Holiday Revenue Campaign,Paid,LinkedIn,Revenue,Fashion,2025-11-01,2025-12-20,3842.71,211397,4696,196,17786.83,3.628720,4.628720,Kaggle posts + modeled campaign economics
+ORG-X_TWITTER,Organic / Always On,Organic,X/Twitter,Organic Content,Mixed,2024-01-01,2025-12-31,0.00,34827444,540187,10812,0.00,0.000000,0.000000,Kaggle posts + modeled campaign economics
+CMP-2024-X_TWITTER-01,2024 Q1 Awareness Sprint,Paid,X/Twitter,Awareness,Education,2024-01-10,2024-02-28,9966.61,1270556,18658,396,13143.26,0.318729,1.318729,Kaggle posts + modeled campaign economics
+CMP-2024-X_TWITTER-02,2024 Spring Product Launch,Paid,X/Twitter,Product Launch,Technology,2024-03-05,2024-04-30,7422.80,1004675,14979,297,17856.64,1.405647,2.405647,Kaggle posts + modeled campaign economics
+CMP-2024-X_TWITTER-03,2024 Summer Creator Push,Paid,X/Twitter,Engagement,Entertainment,2024-06-01,2024-07-31,12995.07,1725532,28333,560,31879.99,1.453237,2.453237,Kaggle posts + modeled campaign economics
+CMP-2024-X_TWITTER-04,2024 Back to School Offer,Paid,X/Twitter,Conversion,Business,2024-08-10,2024-09-25,8823.19,1370266,21325,403,19807.43,1.244928,2.244928,Kaggle posts + modeled campaign economics
+CMP-2024-X_TWITTER-05,2024 Holiday Revenue Campaign,Paid,X/Twitter,Revenue,Fashion,2024-11-01,2024-12-20,7507.57,1277590,18898,382,23554.54,2.137439,3.137439,Kaggle posts + modeled campaign economics
+CMP-2025-X_TWITTER-06,2025 Q1 Awareness Sprint,Paid,X/Twitter,Awareness,Education,2025-01-10,2025-02-28,12284.12,1570732,24496,506,22010.81,0.791810,1.791810,Kaggle posts + modeled campaign economics
+CMP-2025-X_TWITTER-07,2025 Spring Product Launch,Paid,X/Twitter,Product Launch,Technology,2025-03-05,2025-04-30,12308.55,1811518,29113,599,32960.60,1.677862,2.677862,Kaggle posts + modeled campaign economics
+CMP-2025-X_TWITTER-08,2025 Summer Creator Push,Paid,X/Twitter,Engagement,Entertainment,2025-06-01,2025-07-31,7723.56,1269879,19578,399,17182.62,1.224702,2.224702,Kaggle posts + modeled campaign economics
+CMP-2025-X_TWITTER-09,2025 Back to School Offer,Paid,X/Twitter,Conversion,Business,2025-08-10,2025-09-25,12561.69,1605845,25196,489,38323.16,2.050797,3.050797,Kaggle posts + modeled campaign economics
+CMP-2025-X_TWITTER-10,2025 Holiday Revenue Campaign,Paid,X/Twitter,Revenue,Fashion,2025-11-01,2025-12-20,12254.74,1603106,24731,502,42863.05,2.497671,3.497671,Kaggle posts + modeled campaign economics

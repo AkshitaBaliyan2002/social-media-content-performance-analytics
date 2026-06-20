@@ -87,7 +87,16 @@ Power BI build assets are in `powerbi/`:
 |   |-- dashboard_pages.md
 |   |-- measures.dax
 |   |-- power_query_template.pq
+|   |-- social_media_content_performance_dashboard.pbix
+|   |-- social_media_dark_theme.json
 |   |-- social_media_theme.json
+|-- screenshots/
+|   |-- 01_executive_overview.png
+|   |-- 02_content_performance.png
+|   |-- 03_posting_time_analysis.png
+|   |-- 04_follower_growth.png
+|   |-- 05_campaign_roi.png
+|   |-- 06_ab_testing.png
 |-- scripts/
 |   |-- build_sqlite_db.py
 |   |-- prepare_kaggle_social_media_data.py
@@ -121,6 +130,32 @@ This creates `data/social_media_analytics.sqlite` with the base tables and these
 - `v_campaign_roi`
 - `v_follower_growth_monthly`
 - `v_ab_test_results`
+
+## Dashboard Preview
+
+### Executive Overview
+
+![Executive Overview](screenshots/01_executive_overview.png)
+
+### Content Performance
+
+![Content Performance](screenshots/02_content_performance.png)
+
+### Posting Time Analysis
+
+![Posting Time Analysis](screenshots/03_posting_time_analysis.png)
+
+### Follower Growth
+
+![Follower Growth](screenshots/04_follower_growth.png)
+
+### Campaign ROI
+
+![Campaign ROI](screenshots/05_campaign_roi.png)
+
+### A/B Testing
+
+![A/B Testing](screenshots/06_ab_testing.png)
 
 ## Validation
 

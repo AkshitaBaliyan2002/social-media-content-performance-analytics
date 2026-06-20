@@ -16,10 +16,11 @@ Key questions answered:
 
 ## Tools Used
 
-- Python for data preparation and validation
-- Kaggle public dataset via `kagglehub`
+- Python for data preparation, validation, and optional SQLite loading
+- Kaggle public dataset through `kagglehub`
+- SQL through local SQLite tables and analysis views
 - Power BI Desktop for dashboarding
-- CSV files as the reporting data layer
+- CSV files as the default reporting data layer
 
 ## Data Source
 
@@ -50,46 +51,76 @@ The Power BI dashboard is designed around six report pages:
 - Campaign ROI
 - A/B Testing
 
+Power BI build assets are in `powerbi/`:
+
+- `README.md`: import, model, and hosting instructions
+- `measures.dax`: dashboard measures
+- `dashboard_pages.md`: visual-by-visual page blueprint
+- `power_query_template.pq`: optional Power Query typing templates
+- `social_media_theme.json`: report theme
+
 ## Key Metrics
 
-- Impressions
-- Reach
-- Likes, comments, shares, and saves
-- Engagement rate
-- Click-through rate
-- Follower growth rate
-- Campaign spend and revenue
-- ROI and ROAS
-- Conversion rate
-- A/B test winner
+- Impressions and reach
+- Likes, comments, shares, saves, and total engagements
+- Engagement rate and click-through rate
+- Follower growth and churn
+- Campaign spend, revenue, ROI, and ROAS
+- Conversion rate and cost per conversion
+- A/B test winner and variant lift
 
 ## Repository Structure
 
 ```text
 .
-├── data/
-│   └── processed/
-│       ├── ab_tests.csv
-│       ├── campaigns.csv
-│       ├── date_table.csv
-│       ├── followers_daily.csv
-│       ├── platforms.csv
-│       ├── posts.csv
-│       └── source_manifest.csv
-├── scripts/
-│   ├── prepare_kaggle_social_media_data.py
-│   └── validate_data.py
-├── requirements.txt
-└── README.md
+|-- data/
+|   |-- processed/
+|   |   |-- ab_tests.csv
+|   |   |-- campaigns.csv
+|   |   |-- date_table.csv
+|   |   |-- followers_daily.csv
+|   |   |-- platforms.csv
+|   |   |-- posts.csv
+|   |   |-- source_manifest.csv
+|-- powerbi/
+|   |-- README.md
+|   |-- dashboard_pages.md
+|   |-- measures.dax
+|   |-- power_query_template.pq
+|   |-- social_media_theme.json
+|-- scripts/
+|   |-- build_sqlite_db.py
+|   |-- prepare_kaggle_social_media_data.py
+|   |-- validate_data.py
+|-- sql/
+|   |-- schema_and_views.sql
+|-- requirements.txt
+|-- README.md
 ```
 
 ## Reproduce the Dataset
 
 ```bash
-python3 -m pip install -r requirements.txt
-python3 scripts/prepare_kaggle_social_media_data.py
-python3 scripts/validate_data.py
+python -m pip install -r requirements.txt
+python scripts/prepare_kaggle_social_media_data.py
+python scripts/validate_data.py
 ```
+
+## Build the Optional SQLite Database
+
+The Power BI dashboard should use the CSV files for the simplest setup. The SQLite database is included so the project also demonstrates SQL analysis.
+
+```bash
+python scripts/build_sqlite_db.py
+```
+
+This creates `data/social_media_analytics.sqlite` with the base tables and these SQL views:
+
+- `v_post_performance`
+- `v_posting_time_performance`
+- `v_campaign_roi`
+- `v_follower_growth_monthly`
+- `v_ab_test_results`
 
 ## Validation
 
@@ -111,3 +142,17 @@ Current processed dataset:
 - `date_table.csv`: 731 rows
 - `platforms.csv`: 5 rows
 
+Profiled dashboard totals:
+
+- Date range: 2024-01-01 to 2025-12-31
+- Total impressions: 514,925,953
+- Total reach: 385,622,153
+- Total engagements: 42,170,185
+- Total clicks: 8,083,542
+- Overall engagement rate: 8.19%
+- Overall CTR: 1.57%
+- Paid ROAS: 2.33
+
+## Power BI Hosting Note
+
+Build locally with free Power BI Desktop. For no-cost submission, the safest options are a `.pbix` file, PDF export, screenshots, or a short screen recording. Public `Publish to web` can work for portfolio sharing only if the data is safe to expose publicly and the Power BI tenant allows it. Private sharing generally requires Power BI Pro/PPU or eligible Premium/Fabric capacity.

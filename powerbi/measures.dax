@@ -1,0 +1,263 @@
+// Social Media Content Performance Analytics
+// Paste these measures into Power BI after importing the CSV tables.
+// Table names assume the CSV file names are kept as imported:
+// posts, campaigns, followers_daily, ab_tests, date_table, platforms.
+
+Total Posts =
+DISTINCTCOUNT('posts'[post_id])
+
+Total Impressions =
+SUM('posts'[impressions])
+
+Total Reach =
+SUM('posts'[reach])
+
+Total Likes =
+SUM('posts'[likes])
+
+Total Comments =
+SUM('posts'[comments])
+
+Total Shares =
+SUM('posts'[shares])
+
+Total Saves =
+SUM('posts'[saves])
+
+Total Clicks =
+SUM('posts'[clicks])
+
+Total Engagements =
+SUMX(
+    'posts',
+    'posts'[likes] + 'posts'[comments] + 'posts'[shares] + 'posts'[saves]
+)
+
+Engagement Rate =
+DIVIDE([Total Engagements], [Total Impressions])
+
+Overall CTR =
+DIVIDE([Total Clicks], [Total Impressions])
+
+Average Post Engagement Rate =
+AVERAGE('posts'[engagement_rate])
+
+Average Post CTR =
+AVERAGE('posts'[ctr])
+
+Reach Rate =
+DIVIDE([Total Reach], [Total Impressions])
+
+Organic Impressions =
+CALCULATE(
+    [Total Impressions],
+    'posts'[campaign_type] = "Organic"
+)
+
+Paid Post Impressions =
+CALCULATE(
+    [Total Impressions],
+    'posts'[campaign_type] = "Paid"
+)
+
+Paid Spend =
+CALCULATE(
+    SUM('campaigns'[spend]),
+    'campaigns'[campaign_type] = "Paid"
+)
+
+Paid Revenue =
+CALCULATE(
+    SUM('campaigns'[revenue]),
+    'campaigns'[campaign_type] = "Paid"
+)
+
+Campaign Conversions =
+CALCULATE(
+    SUM('campaigns'[conversions]),
+    'campaigns'[campaign_type] = "Paid"
+)
+
+Campaign Clicks =
+CALCULATE(
+    SUM('campaigns'[clicks]),
+    'campaigns'[campaign_type] = "Paid"
+)
+
+Campaign ROI =
+DIVIDE([Paid Revenue] - [Paid Spend], [Paid Spend])
+
+ROAS =
+DIVIDE([Paid Revenue], [Paid Spend])
+
+Cost per Conversion =
+DIVIDE([Paid Spend], [Campaign Conversions])
+
+Campaign Conversion Rate =
+DIVIDE([Campaign Conversions], [Campaign Clicks])
+
+Latest Followers =
+VAR LatestVisibleDate =
+    MAX('date_table'[date])
+RETURN
+    CALCULATE(
+        SUM('followers_daily'[followers]),
+        'followers_daily'[date] = LatestVisibleDate
+    )
+
+Followers Start =
+VAR StartDate =
+    MIN('date_table'[date])
+RETURN
+    CALCULATE(
+        SUM('followers_daily'[followers]),
+        'followers_daily'[date] = StartDate
+    )
+
+Followers End =
+VAR EndDate =
+    MAX('date_table'[date])
+RETURN
+    CALCULATE(
+        SUM('followers_daily'[followers]),
+        'followers_daily'[date] = EndDate
+    )
+
+New Followers =
+SUM('followers_daily'[new_followers])
+
+Lost Followers =
+SUM('followers_daily'[lost_followers])
+
+Follower Net Growth =
+SUM('followers_daily'[net_growth])
+
+Follower Growth % =
+DIVIDE([Followers End] - [Followers Start], [Followers Start])
+
+Average Daily Net Growth =
+AVERAGE('followers_daily'[net_growth])
+
+A/B Tests =
+DISTINCTCOUNT('ab_tests'[test_id])
+
+A/B Variants =
+COUNTROWS('ab_tests')
+
+A/B Impressions =
+SUM('ab_tests'[impressions])
+
+A/B Clicks =
+SUM('ab_tests'[clicks])
+
+A/B Conversions =
+SUM('ab_tests'[conversions])
+
+A/B Engagements =
+SUM('ab_tests'[engagements])
+
+A/B CTR =
+DIVIDE([A/B Clicks], [A/B Impressions])
+
+A/B Conversion Rate =
+DIVIDE([A/B Conversions], [A/B Clicks])
+
+A/B Engagement Rate =
+DIVIDE([A/B Engagements], [A/B Impressions])
+
+A/B Winner Rows =
+CALCULATE(
+    COUNTROWS('ab_tests'),
+    'ab_tests'[winner] = "Winner"
+)
+
+A/B Variant Lift vs A =
+VAR ControlRate =
+    CALCULATE(
+        [A/B Conversion Rate],
+        REMOVEFILTERS('ab_tests'[variant]),
+        'ab_tests'[variant] = "A"
+    )
+RETURN
+    DIVIDE([A/B Conversion Rate] - ControlRate, ControlRate)
+
+Best Posting Hour =
+VAR RankedHours =
+    TOPN(
+        1,
+        ADDCOLUMNS(
+            VALUES('posts'[post_hour]),
+            "HourEngagementRate", [Engagement Rate]
+        ),
+        [HourEngagementRate],
+        DESC
+    )
+RETURN
+    CONCATENATEX(
+        RankedHours,
+        FORMAT('posts'[post_hour], "00") & ":00",
+        ", "
+    )
+
+Best Posting Bucket =
+VAR RankedBuckets =
+    TOPN(
+        1,
+        ADDCOLUMNS(
+            VALUES('posts'[posting_time_bucket]),
+            "BucketEngagementRate", [Engagement Rate]
+        ),
+        [BucketEngagementRate],
+        DESC
+    )
+RETURN
+    CONCATENATEX(
+        RankedBuckets,
+        'posts'[posting_time_bucket],
+        ", "
+    )
+
+Best Weekday =
+VAR RankedWeekdays =
+    TOPN(
+        1,
+        ADDCOLUMNS(
+            VALUES('date_table'[weekday_name]),
+            "WeekdayEngagementRate", [Engagement Rate]
+        ),
+        [WeekdayEngagementRate],
+        DESC
+    )
+RETURN
+    CONCATENATEX(
+        RankedWeekdays,
+        'date_table'[weekday_name],
+        ", "
+    )
+
+Best Content Category =
+VAR RankedCategories =
+    TOPN(
+        1,
+        ADDCOLUMNS(
+            VALUES('posts'[content_category]),
+            "CategoryEngagementRate", [Engagement Rate]
+        ),
+        [CategoryEngagementRate],
+        DESC
+    )
+RETURN
+    CONCATENATEX(
+        RankedCategories,
+        'posts'[content_category],
+        ", "
+    )
+
+Platform Impression Share =
+DIVIDE(
+    [Total Impressions],
+    CALCULATE(
+        [Total Impressions],
+        ALL('platforms'[platform])
+    )
+)

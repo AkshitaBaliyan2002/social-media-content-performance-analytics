@@ -14,4 +14,7 @@ venv/
 # Local exports that can be regenerated
 exports/
 screenshots/
+*.sqlite
+*.sqlite3
+*.db
 
